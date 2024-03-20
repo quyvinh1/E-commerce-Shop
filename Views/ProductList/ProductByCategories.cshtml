@@ -1,0 +1,231 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Tittle"] = "ProductByCategories";
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+
+}
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<Product>
+<div class="section">
+<!-- container -->
+<div class="container">
+    <!-- row -->
+    <div class="row">
+        <!-- ASIDE -->
+        <div id="aside" class="col-md-3">
+            <!-- aside Widget -->
+            <div class="aside">
+                <h3 class="aside-title">Categories</h3>
+                <div class="checkbox-filter">
+
+                    <form action="product2" id="f1" name="f1">
+                        <div class="input-checkbox">
+                            <input type="checkbox" name="cidd" id="c0" value="}"
+                                   onclick="setCheck(this)" />
+                            <label for="c0">
+                                <span></span>
+                                All
+                            </label>
+                        </div>
+
+                        <div class="input-checkbox">
+                            <input type="checkbox" name="cidd" id="" value=""
+                                   onclick="setCheck(this)" />
+                            <label for="">
+                                <span></span>
+
+                            </label>
+                        </div>
+
+                    </form>
+                    <!--                                <div class="input-checkbox">
+                                                        <input type="checkbox" id="category-2">
+                                                        <label for="category-2">
+                                                            <span></span>
+                                                            Smartphones
+                                                            <small>(740)</small>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="input-checkbox">
+                                                        <input type="checkbox" id="category-3">
+                                                        <label for="category-3">
+                                                            <span></span>
+                                                            Cameras
+                                                            <small>(1450)</small>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="input-checkbox">
+                                                        <input type="checkbox" id="category-4">
+                                                        <label for="category-4">
+                                                            <span></span>
+                                                            Accessories
+                                                            <small>(578)</small>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="input-checkbox">
+                                                        <input type="checkbox" id="category-5">
+                                                        <label for="category-5">
+                                                            <span></span>
+                                                            Laptops
+                                                            <small>(120)</small>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="input-checkbox">
+                                                        <input type="checkbox" id="category-6">
+                                                        <label for="category-6">
+                                                            <span></span>
+                                                            Smartphones
+                                                            <small>(740)</small>
+                                                        </label>
+                                                    </div>-->
+                </div>
+            </div>
+            <!-- /aside Widget -->
+            <!-- aside Widget -->
+            <div class="aside">
+                <h3 class="aside-title">Price</h3>
+                <div class="checkbox-filter">
+                    <!--                            <div class="price-filter">
+                                                    <div id="price-slider"></div>
+                                                    <div class="input-number price-min">
+                                                        <input id="price-min" type="number" name="price-min">
+                                                        <span class="qty-up">+</span>
+                                                        <span class="qty-down">-</span>
+                                                    </div>
+                                                    <span>-</span>
+                                                    <div class="input-number price-max">
+                                                        <input id="price-max" type="number" name="price-max">
+                                                        <span class="qty-up">+</span>
+                                                        <span class="qty-down">-</span>
+                                                    </div>
+                                                </div>-->
+
+                    <form action="product2" id="f2">
+
+                        <div class="input-checkbox">
+                            <input type="checkbox" name="price" id="g0" value="0"
+                                   onclick="setCheck1(this)" />
+                            <label for="g0">
+                                <span></span>
+                                All
+                            </label>
+                        </div>
+
+                        <div class="input-checkbox">
+
+                            <input type="checkbox" name="price" id="" value=""
+                                   onclick="setCheck1(this)" />
+                            <label for="">
+                                <span></span>
+
+                            </label>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <!-- /aside Widget -->
+            <!-- aside Widget -->
+            <!--                        <div class="aside">
+                                            <h3 class="aside-title">Top selling</h3>
+                <c:forEach items="${requestScope.data}" begin="${1}" end="${4}" var="p">
+                <div class="product-widget">
+                    <div class="product-img">
+                        <img src="${p.image}" alt="">
+                    </div>
+                    <div class="product-body">
+                        <p class="product-category">${p.category}</p>
+                        <h3 class="product-name"><a href="#">${p.name}</a></h3>
+                        <h4 class="product-price">${p.price} <del class="product-old-price">${p.price + 100.00}</del></h4>
+                    </div>
+                </div>
+                </c:forEach>
+                <div class="product-widget">
+                    <div class="product-img">
+                        <img src="./img/product02.png" alt="">
+                    </div>
+                    <div class="product-body">
+                        <p class="product-category">Category</p>
+                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                    </div>
+                </div>
+
+                <div class="product-widget">
+                    <div class="product-img">
+                        <img src="./img/product03.png" alt="">
+                    </div>
+                    <div class="product-body">
+                        <p class="product-category">Category</p>
+                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                    </div>
+                </div>
+            </div>-->
+            <!-- /aside Widget -->
+        </div>
+        <!-- /ASIDE -->
+        <!-- STORE -->
+        <div id="store" class="col-md-9">
+            <!-- store top filter -->
+            <div class="store-filter clearfix">
+                <div class="store-sort">
+                    <label>
+                        Sort By:
+                        <form action="product" method="post">
+                            <select class="input-select" name="sort" onchange="this.form.submit()">
+                                <option value="0">Price Descending</option>
+                                <option value="1">Price Ascending</option>
+                            </select>
+                        </form>
+                    </label>
+
+                    <label>
+                        Show:
+                        <select class="input-select" name="numper">
+                            <option value="0">9</option>
+
+                        </select>
+                    </label>
+                </div>
+                <ul class="store-grid">
+                    <li class="active"><i class="fa fa-th"></i></li>
+
+                </ul>
+            </div>
+            <!-- /store top filter -->
+            <!-- store products -->
+            <div class="row">
+                <!-- product -->
+                @foreach (var item in Model)
+                {
+                        @await Html.PartialAsync("ProductPartial",item)
+                }
+
+            </div>
+            <!-- /store products -->
+            <!-- store bottom filter -->
+
+            <div class="store-filter clearfix">
+
+                <ul class="">
+
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page })) 
+
+                </ul>
+            </div>
+            <!-- /store bottom filter -->
+        </div>
+        <!-- /STORE -->
+    </div>
+    <!-- /row -->
+</div>
+<!-- /container -->
+</div>
