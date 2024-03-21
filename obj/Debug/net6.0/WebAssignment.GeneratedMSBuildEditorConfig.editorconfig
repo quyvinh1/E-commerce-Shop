@@ -58,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdExpc3RcR2V0RmlsdGVyZWRQcm9kdWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ADMIN/source/repos/Project_PRN211_HE176574_SE1754-NET/WebAssignment/Views/ProductList/GetProductCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdExpc3RcR2V0UHJvZHVjdENhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ADMIN/source/repos/Project_PRN211_HE176574_SE1754-NET/WebAssignment/Views/ProductList/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdExpc3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -68,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ADMIN/source/repos/Project_PRN211_HE176574_SE1754-NET/WebAssignment/Views/ProductList/ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdExpc3RcUHJvZHVjdERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/source/repos/Project_PRN211_HE176574_SE1754-NET/WebAssignment/Views/ProductList/SearchProductByName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdExpc3RcU2VhcmNoUHJvZHVjdEJ5TmFtZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/source/repos/Project_PRN211_HE176574_SE1754-NET/WebAssignment/Views/Shared/Components/ProductCategoryMenu/Default.cshtml]

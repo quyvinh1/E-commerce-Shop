@@ -1,8 +1,9 @@
 ﻿
 @{
-    ViewData["Tittle"] = "GetFilteredProducts";
+    ViewData["Title"] = "GetProductCategories";
     Layout = "~/Views/Shared/_LayoutShop.cshtml";
 }
+
 @using X.PagedList.Mvc.Core;
 @model Product.ProductViewModel;
 <div class="section">
@@ -18,15 +19,15 @@
                     @foreach (var categories in Model.Categories)
                     {
                         <form method="post" asp-action="GetProductCategories" asp-asp-controller="ProductList" asp-route-catId="@categories.Id">
-                        <div class="checkbox-filter">
-                            <div class="input-checkbox">
+                            <div class="checkbox-filter">
+                                <div class="input-checkbox">
                                     <input type="checkbox" name="categories" id="@categories.Id" value="@categories.Id" onclick="this.form.submit()" />
-                                <label for="@categories.Id">
-                                    <span></span>
-                                    @categories.CategoryName
-                                </label>
+                                    <label for="@categories.Id">
+                                        <span></span>
+                                        @categories.CategoryName
+                                    </label>
+                                </div>
                             </div>
-                        </div>
                         </form>
                     }
                 </div>
@@ -147,3 +148,7 @@
     </div>
     <!-- /container -->
 </div>
+
+
+
+

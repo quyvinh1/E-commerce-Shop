@@ -528,3 +528,4 @@ C:\Users\ADMIN\source\repos\Project_PRN211_HE176574_SE1754-NET\WebAssignment\obj
 C:\Users\ADMIN\source\repos\Project_PRN211_HE176574_SE1754-NET\WebAssignment\obj\Debug\net6.0\WebAssignment.pdb
 C:\Users\ADMIN\source\repos\Project_PRN211_HE176574_SE1754-NET\WebAssignment\obj\Debug\net6.0\WebAssignment.genruntimeconfig.cache
 C:\Users\ADMIN\source\repos\Project_PRN211_HE176574_SE1754-NET\WebAssignment\obj\Debug\net6.0\ref\WebAssignment.dll
+C:\Users\ADMIN\source\repos\Project_PRN211_HE176574_SE1754-NET\WebAssignment\obj\Debug\net6.0\WebAssignment.sourcelink.json

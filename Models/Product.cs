@@ -25,12 +25,11 @@ namespace WebAssignment.Models
         public virtual ProductCategory? ProductCategory { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
         public virtual ICollection<WishList> WishLists { get; set; }
-
         public class ProductViewModel
         {
             public List<Brand> Brands { get; set; }
             public List<ProductCategory> Categories { get; set; }
-            public PagedList<Product> Products { get; set; }
+            public IPagedList<Product> Products { get; set; }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace WebAssignment.Controllers
 			var listProduct = db.Products.AsNoTracking().OrderBy(x => x.Id);
 			PagedList<Product> lst = new PagedList<Product>(listProduct,pageNumber,pageSize);
 			var viewModel = new Product.ProductViewModel
-            {
+			{
 				Brands = brands,
 				Categories = categories,
 				Products = lst
@@ -79,22 +79,58 @@ namespace WebAssignment.Controllers
 		}
 		[HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult GetFilteredProducts(int?[] brandIds,int? page)
+        public IActionResult GetFilteredProducts(int? brandIds,int? page)
 		{
             var brands = db.Brands.ToList();
             var categories = db.ProductCategories.ToList();
             int pageSize = 9;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
-            var products = db.Products.Where(p => brandIds.Contains(p.BrandId)).ToList();
+            var products = db.Products.Where(p => p.BrandId == brandIds).ToList();
             PagedList<Product> lst = new PagedList<Product>(products, pageNumber, pageSize);
-            var viewModel = new Product.ProductViewModel
-            {
-                Brands = brands,
-                Categories = categories,
-                Products = lst
-            };
-            return PartialView("ProductPartial",viewModel);
+			var viewModel = new Product.ProductViewModel
+			{
+				Brands = brands,
+				Categories = categories,
+				Products = lst
+			};
+			return View(viewModel);
 		}
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+        public IActionResult GetProductCategories(int? catId, int? page)
+        {
+            var brands = db.Brands.ToList();
+            var categories = db.ProductCategories.ToList();
+            int pageSize = 9;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var products = db.Products.Where(p => p.ProductCategoryId == catId).ToList();
+            PagedList<Product> lst = new PagedList<Product>(products, pageNumber, pageSize);
+			var viewModel = new Product.ProductViewModel
+			{
+				Brands = brands,
+				Categories = categories,
+				Products = lst
+			};
+			return View(viewModel);
+        }
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult SearchProductByName(string input,int? page)
+		{
+            var brands = db.Brands.ToList();
+            var categories = db.ProductCategories.ToList();
+            int pageSize = 9;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var products = db.Products.Where(p=>p.Name.ToLower().Contains(input.ToLower())).ToList();
+            PagedList<Product> lst = new PagedList<Product>(products, pageNumber, pageSize);
+			var viewModel = new Product.ProductViewModel
+			{
+				Brands = brands,
+				Categories = categories,
+				Products = lst
+			};
+			return View(viewModel);
+        }
         // GET: ProductListController/Details/5
         public ActionResult Details(int id)
 		{
