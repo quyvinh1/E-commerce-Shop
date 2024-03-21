@@ -617,8 +617,20 @@
       "PackagePath": "staticwebassets\\LayoutAdmin\\screenshot.jpg"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\Project_PRN211_HE176574_SE1754-NET\\WebAssignment\\wwwroot\\css\\Cart.css",
+      "PackagePath": "staticwebassets\\css\\Cart.css"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\source\\repos\\Project_PRN211_HE176574_SE1754-NET\\WebAssignment\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\Project_PRN211_HE176574_SE1754-NET\\WebAssignment\\wwwroot\\css\\cartamountconfig.css",
+      "PackagePath": "staticwebassets\\css\\cartamountconfig.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\Project_PRN211_HE176574_SE1754-NET\\WebAssignment\\wwwroot\\css\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\checkout.css"
     },
     {
       "Id": "C:\\Users\\ADMIN\\source\\repos\\Project_PRN211_HE176574_SE1754-NET\\WebAssignment\\wwwroot\\css\\demo.css",

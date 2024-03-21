@@ -1,0 +1,95 @@
+﻿@using WebAssignment.Models.ViewModel
+@model CartItemViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+
+<section class="shop-cart spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shop__cart__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody> 
+                            @if(Model.CartItems.Count > 0)
+                            {
+                                foreach (var item in Model.CartItems)
+                                {
+
+
+                                    <tr>
+                                        <td class="cart__product__item d-flex align-items-center">
+                                            <img src="~/images/@item.Image" alt="" style="max-width: 25%; height: auto;">
+                                            <div class="cart__product__item__title">
+                                                <h6><a href="" class="product-link">@item.ProductName</a></h6>                                        
+                                            </div>
+                                        </td>
+                                        <td class="cart__price">
+                                            @item.Price
+                                        </td>
+                                        <td class="cart__quantity">                                               
+                                            <div class="quantity-control-cart">
+                                                <a asp-controller="Cart" asp-action="Decrease" asp-route-id="@item.ProductId"><button>-</button></a>
+                                                <input type="text" class="quantityInput-cart" value="@item.Quantity" readonly>
+                                                <a asp-controller="Cart" asp-action="Increase" asp-route-id="@item.ProductId"><button>+</button></a>
+                                            </div>
+                                        </td>
+                                        <td class="cart__total">
+                                            @Model.CartItems.Where(x=> x.ProductId == @item.ProductId).Sum(x=>x.Quantity*x.Price).ToString()
+                                        </td>
+                                        <td class="cart__close"><a asp-controller="Cart" asp-action="Remove" asp-route-id="@item.ProductId"><span class="icon_close">X</span></a></td>
+                                    </tr>
+                                }
+                            } else
+                            {
+                                <tr>
+                                    <td colspan="4"><h4>Cart is empty</h4></td>
+                                </tr>
+                                
+                            }
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="cart__btn">
+                        <a href="shop">Continue Shopping</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-2">
+                    
+                    <div class="cart__total__procced">
+                        <h6>Cart total</h6>
+                        <ul>
+                            <li>Subtotal
+                                <span>
+                                    @Model.GrandTotal.ToString()
+                                </span>
+                            </li>
+                            <li>Shipping <span>Freeship</span></li>
+                            <li>Total
+                                <span>
+                                @Model.GrandTotal.ToString()
+                                </span>
+                            </li>
+                        </ul>
+                        <a href="checkout" class="primary-btn">Proceed to checkout</a>
+                    </div>
+                                                    
+                </div>
+            </div>
+        </div>
+    </section>
+

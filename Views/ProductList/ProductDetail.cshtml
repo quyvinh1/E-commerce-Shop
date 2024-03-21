@@ -62,10 +62,10 @@
 														</select>
 													</label>
 												</div>-->
-					<form name="f" action="" method="post">
+					<form asp-action="Add" asp-controller="Cart" asp-route-Id="@Model.Id" method="post">
 						<div class="add-to-cart">
 
-							<input type="button" class="add-to-cart-btn" onclick="buy('${p.id}')" value="Add to cart">
+							<input type="button" class="add-to-cart-btn" onclick="this.form.submit()" value="Add to cart">
 						</div>
 					</form>
 					<ul class="product-btns">

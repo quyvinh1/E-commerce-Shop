@@ -1,0 +1,42 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 13, 2024, 10:10:29 AM
+    Author     : Tosaka
+*/
+.quantity-control-cart {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control-cart button {
+    padding: -5px -10px;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+.quantity-control-cart a{
+    color: black;
+}
+
+.quantityInput-cart {
+    width: 40px;
+    text-align: center;
+    border: none; 
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.quantity-control-cart button:hover {
+    border-color: red; /* Change border color to red on hover */
+}
+
+
+

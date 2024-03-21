@@ -27,6 +27,9 @@
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="~/css/style.css" />
+	<link rel="stylesheet" href="~/css/cartamountconfig.css" type="text/css">
+	<link rel="stylesheet" href="~/css/Cart.css" type="text/css">
+	
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,9 +52,8 @@
 				<ul class="header-links pull-right">
 
 					<li><a asp-area="admin" asp-controller="HomeAdmin" asp-action="Index">Manager Task</a></li>
-					@if (!string.IsNullOrEmpty(ViewBag.UserName))
+					@if (User.Identity?.IsAuthenticated ?? false)
 					{
-						<li><a>@ViewBag.UserName</a></li>
 						<li><span style="color: red"></span>&nbsp;&nbsp;<a asp-action="Logout" asp-controller="Login">Log out</a></li>
 					} else
 					{

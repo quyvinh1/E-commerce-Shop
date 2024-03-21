@@ -12,11 +12,18 @@ namespace WebAssignment
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-			var connectionString = builder.Configuration.GetConnectionString("DBContext");
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.IsEssential = true;
+            });
+            var connectionString = builder.Configuration.GetConnectionString("DBContext");
 			builder.Services.AddDbContext<PRN211_ProjectContext>(x => x.UseSqlServer("Server=(local);uid=sa;pwd=123;database=PRN211_Project;"));
 			builder.Services.AddScoped<IProductCategory, ProductCategoryRepository>();
-            builder.Services.AddSession();
+            
             var app = builder.Build();
+            app.UseSession();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

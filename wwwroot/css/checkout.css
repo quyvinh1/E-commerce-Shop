@@ -1,0 +1,98 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 17, 2024, 10:12:17 PM
+    Author     : Tosaka
+*/
+.product-column {
+    flex: 1; /* This makes the product column flexible */
+}
+
+.checkout__order__product ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.checkout__order__product li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.top__text__mid {
+    margin-right: 56px; 
+}
+
+.checkout__order__product {
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 22px;
+}
+
+.checkout__order__product table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.checkout__order__product th, .checkout__order__product td {
+    padding: 8px;
+    text-align: left;
+    border: none;
+}
+
+.checkout__order__product th {
+    font-weight: bold;
+    border-bottom: 1px solid #d7d7d7;
+    border: none;
+}
+
+.checkout__order__product tr {
+    border: none;
+}
+
+.checkout__order__product td {
+    border-bottom: 1px solid #d7d7d7;
+    word-wrap: break-word; /* Allow long words to wrap onto the next line */
+    font-size: 15px;
+    border: none;
+}
+
+.checkout__order__product td:last-child {
+    text-align: right;
+}
+
+.product-name {
+    max-width: 5px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-link {
+    color: black; /* Default color */
+}
+
+.product-link:hover {
+    color: red; /* Hover color */
+}
+
+
+.btn-primary {
+    background-color: #ca1515;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    text-decoration: none; 
+}
+
+.btn-primary:hover {
+    background-color: #b20d0d; /* Darken color on hover */
+}
+
+
+
